@@ -13,7 +13,7 @@ pipeline {
                 emailext(
                     subject: 'New Commit in GitHub Repository',
                     body: readFile('README.md'),
-                    to: 'youssefcheour.5@gmail.com',
+                    to: 'fareslaamloum@gmail.com@gmail.com',
                     mimeType: 'text/plain'
                 )
             }

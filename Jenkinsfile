@@ -11,9 +11,10 @@ pipeline {
             steps {
                 // Send an email with the content of README.md
                 emailext(
+                    from: 'fareslaamloum@gmail.com',
                     subject: 'New Commit in GitHub Repository',
                     body: readFile('README.md'),
-                    to: 'fareslaamloum@gmail.com',
+                    to: 'youssefcheour.5@gmail.com',
                     mimeType: 'text/plain'
                 )
             }

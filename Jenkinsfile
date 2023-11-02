@@ -7,7 +7,26 @@ pipeline {
                 checkout([$class: 'GitSCM', branches: [[name: '*/main']], userRemoteConfigs: [[url: 'https://github.com/youssef-Magic/jenkins.git']]])
             }
         }
-        stage('Send Email') {
+	
+	stage('Build') {
+            steps {
+                echo 'Building..'
+            }
+        }
+        
+	stage('Test') {
+            steps {
+                echo 'Testing..'
+            }
+        }
+        
+	stage('Deploy') {
+            steps {
+                echo 'Deploying....'
+            }        
+	}
+
+	stage('Send Email') {
             steps {
                 // Send an email with the content of README.md
                 emailext(

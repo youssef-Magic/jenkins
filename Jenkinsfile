@@ -20,12 +20,6 @@ pipeline {
             }
         }
         
-	stage('Deploy') {
-            steps {
-                echo 'Deploying....'
-            }        
-	}
-
 	stage('Send Email') {
             steps {
                 // Send an email with the content of README.md
